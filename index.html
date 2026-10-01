@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Fruit Frenzy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="menu" class="screen">
+  <h1>FRUIT<br>FRENZY</h1>
+  <button data-act="start">START GAME</button>
+  <button data-act="resume" id="btnResume">RESUME GAME</button>
+  <button data-act="scores">HIGH SCORES</button>
+  <button data-act="settings">SETTINGS</button>
+</div>
+
+<div id="scores" class="screen center hidden">
+  <h2>HIGH SCORE</h2><p class="big" id="hsBig">0000000</p>
+  <button data-act="menu">BACK</button>
+</div>
+
+<div id="settings" class="screen center hidden">
+  <h2>SETTINGS</h2>
+  <button data-act="sound" id="btnSound">SOUND: ON</button>
+  <button data-act="menu">BACK</button>
+</div>
+
+<div id="pause" class="screen center hidden">
+  <h2>GAME PAUSED</h2>
+  <button data-act="unpause">RESUME</button>
+  <button data-act="start">RESTART</button>
+  <button data-act="quit">MAIN MENU</button>
+</div>
+
+<div id="over" class="screen center hidden">
+  <h2>GAME OVER</h2>
+  <p id="newHS" class="gold hidden">NEW HIGH SCORE!</p>
+  <p>SCORE</p><p class="big" id="goScore">0</p>
+  <p>HIGH SCORE <b id="goHigh">0</b> &nbsp; LEVEL <b id="goLevel">1</b></p>
+  <button data-act="start">PLAY AGAIN</button>
+  <button data-act="menu">MAIN MENU</button>
+</div>
+
+<button id="pauseBtn" class="hidden" data-act="pause" aria-label="Pause">II</button>
+<script src="game.js"></script>
+</body>
+</html>
